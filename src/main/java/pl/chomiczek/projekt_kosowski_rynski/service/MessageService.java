@@ -51,4 +51,5 @@ public class MessageService {
         messages.forEach(message -> text.append(message.getText()).append('\n'));
         return text.toString();
     }
+
 }

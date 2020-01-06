@@ -32,7 +32,7 @@
         <label for="textInput">Wprowadź tekst/Input text</label>
         <input th:field="${messageDto.text}" type="text" id="textInput" class="form-control mb-4" placeholder="Tekst/text" required>
         <label for="emailInput">Wprowadź email/Input email</label>
-        <input th:field="${messageDto.email}" type="email" id="emailInput" class="form-control mb-4" placeholder="Email">
+        <input th:field="${messageDto.email}" type="email" id="emailInput" class="form-control mb-4" placeholder="Email" required>
         <button class="btn btn-info btn-block my-4" type="submit">Wykryj język/Detect language</button>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
