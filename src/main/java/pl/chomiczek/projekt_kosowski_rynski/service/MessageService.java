@@ -31,11 +31,11 @@ public class MessageService {
         return messageRepository.findAll();
     }
 
-    public boolean addMessage(MessageDto messageDto) throws APIError {
+    public Message addMessage(MessageDto messageDto) throws APIError {
         Message message = new Message(messageDto.getText(), detectLanguage(messageDto.getText()), messageDto.getEmail());
         messageRepository.save(message);
         senderMail.sendEmail(getMessagesByLanguage(detectLanguage(messageDto.getText()), messageDto.getEmail()), messageDto.getEmail());
-        return true;
+        return message;
     }
 
     private String detectLanguage(String text) throws APIError {
